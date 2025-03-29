@@ -1,0 +1,218 @@
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  padding: 0 0px;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+}
+
+/* the whole window */
+window#waybar {
+font-size: 16px;
+background-color: rgba(31, 32, 41, 0.3); 
+  color: #fff4d2;
+  padding: 0px 0px;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.modules-left {
+  padding-left: 2px;
+}
+
+.modules-right {
+  padding-right: 2px;
+}
+
+#custom-rofi,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#custom-memory,
+#custom-screenshot,
+#custom-reboot,
+#custom-poweroff,
+#pulseaudio,
+#pulseaudio.muted,
+#network,
+#battery,
+#tray,
+#battery.critical,
+#battery.warning,
+#clock {
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 2px;
+}
+
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#custom-memory,
+#custom-screenshot,
+#custom-reboot,
+#custom-poweroff,
+#pulseaudio,
+#pulseaudio.muted,
+#network,
+#battery,
+#tray,
+#battery.critical,
+#battery.warning,
+#clock {
+  padding-right: 4px;
+  margin: 5px 0px;
+}
+
+/* ================================ */
+/*       workspaces module          */
+/* ================================ */
+
+#workspaces {
+  margin: 0px;
+}
+
+#workspaces button {
+  color: #fff4d2;
+  /* border: 2px solid #fff4d2; */
+  min-width: 20px;
+  padding: 0 0px;
+  border-radius: 12px;
+}
+
+#workspaces button:hover {
+    background: rgba(61, 61, 61, 0.459);
+  border: 2px solid #b6b6b6;
+  border-radius: 12px;
+}
+
+#workspaces button.visible {
+  border: 2px solid #b6b6b6;
+  border-radius: 12px;
+  background: rgba(61, 61, 61, 0.459);
+}
+
+#workspaces button.visible:hover {
+  border: 2px solid #b6b6b6;
+  border-radius: 12px;
+  background: rgba(61, 61, 61, 0.459);
+}
+
+#workspaces button.active {
+  border: 2px solid #b6b6b6;
+  border-radius: 12px;
+  background: rgba(61, 61, 61, 0.459);
+}
+
+#workspaces button.active:hover {
+  border: 2px solid #b6b6b6;
+  border-radius: 12px;
+  background: rgba(61, 61, 61, 0.459);
+}
+
+#workspaces button.urgent {
+  border: 2px solid #b92722;
+  border-radius: 12px;
+  background: #ea6962;
+}
+
+/* ================================ */
+/*            window                 */
+/* ================================ */
+
+#window {
+  color: #ff5d5d;
+  border-radius: 12px;
+  padding: 0px 0px;
+}
+
+#clock {
+    font-size: 16px;
+}
+
+/* ================================ */
+/*         pulseaudio               */
+/* ================================ */
+#pulseaudio {
+    color: #e9e9e9;
+    background: rgba(61, 61, 61, 0.459);
+    border-radius: 12px;
+}
+
+#pulseaudio.muted {
+    color: #e9e9e9;
+  background: rgba(61, 61, 61, 0.459);
+  border-radius: 12px;
+}
+
+#pulseaudio:hover {
+    border: 2px solid #b6b6b6;
+}
+
+#tray {
+  color: #e9e9e9;
+  background: rgba(61, 61, 61, 0.459);
+  border-radius: 12px;
+  padding: 0px 10px;
+}
+
+#network {
+    color: #e9e9e9;
+    background: rgba(61, 61, 61, 0.459);
+    border-radius: 12px;
+}
+
+#network:hover {
+    border: 2px solid #b6b6b6;
+}
+
+/* ================================ */
+/*            battery               */
+/* ================================ */
+#battery {
+  color: #e9e9e9;
+  background: rgba(61, 61, 61, 0.459);
+  border-radius: 12px;
+}
+
+#battery:hover {
+    border: 2px solid #b6b6b6;
+}
+
+#battery.charging {
+    color: #e9e9e9;
+    border-radius: 12px;
+}
+
+#battery.critical {
+  color: #e9e9e9;
+  border-radius: 12px;
+}
+
+#battery.warning {
+  color: #e9e9e9;
+  border-radius: 12px;
+}

@@ -1,0 +1,15 @@
+# Wofi Configuration
+
+mode=drun
+allow-images=true
+
+location=
+font="Fira Code 16"
+background=#32a852
+foreground=#d8dee9
+border_color=#4c566a
+width=900
+height=400
+icon_size=32
+animation=true
+prompt=arch linux

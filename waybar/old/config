@@ -1,0 +1,55 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 5,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "battery", "custom/screenshot", "custom/reboot", "custom/poweroff"],
+
+"hyprland/workspaces": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "sort-by-number": true
+},
+
+"network": {
+  "interface": "wlan0",
+  "format": "{icon} ({signalStrength}%)",
+  "format-wifi": "{icon}",
+  "format-disconnected": "Disconnected",
+  "format-icons": [""],
+  "on-click": "/home/enzo/scripts/network.sh",
+  "tooltip-format": "Connected to {essid}"
+},
+
+  "battery": {
+    "bat": "BAT0",
+    "format": "{icon} {capacity}%",
+    "format-icons": [""]
+},
+
+"custom/screenshot": {
+  "format":"{icon}",
+  "format-icons": ["󰹑"],
+  "on-click": "/home/enzo/scripts/screenshot.sh",
+  "tooltip": true,
+  "tooltip-format": "Take screenshot"
+},
+
+"custom/reboot": {
+  "format":"{icon}",
+  "format-icons": [""],
+  "on-click": "/home/enzo/scripts/reboot.sh",
+  "tooltip": true,
+  "tooltip-format": "Reboot time"
+},
+
+"custom/poweroff": {
+  "format":"{icon}",
+  "format-icons": [""],
+  "on-click": "/home/enzo/scripts/poweroff.sh",
+  "tooltip": true,
+  "tooltip-format": "Sleep time"
+}
+}

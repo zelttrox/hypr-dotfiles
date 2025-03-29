@@ -1,0 +1,55 @@
+/* General Styling */
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+      color: #ffffff;
+      border-radius: 5px;
+      padding: 1px;
+    }
+    
+    #waybar {
+      font-size: 18px;
+      background-color: rgba(31, 32, 41, 0.3); 
+    }
+    
+    #waybar .module {
+      margin: 0 5px;
+      border: 1px solid red;
+      padding: 0 2px;
+    }
+  
+    #workspaces button {
+      padding: 0px 5px;
+      font-weight: 800;
+      margin: 0 4px;
+      background-color: rgba(30, 31, 41, 0.6); 
+      border-radius: 100%;
+    }
+  
+   #network {
+    color: #50faf1;
+   }
+  
+    #battery {
+      color: #50fa7b;
+    }
+  
+    #clock {
+      font-weight: bold;
+      color: #eaeaea;
+    }
+    
+    #waybar .module:hover {
+      transition: 0.3s;
+      background-color: rgba(191, 203, 206, 0.3);
+    }
+  
+  #workspaces button.focused {
+      border-color: #4c7899;
+      color: white;
+      background-color: #285577;
+  }
+  
+  #workspaces button.urgent {
+      border-color: #c9545d;
+      color: #c9545d;
+  }

@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "width": 1500,
+    "spacing": 5,
+    "margin-bottom" :5,
+    "margin-right" :8,
+    "margin-left" :8,
+  
+    "modules-left": [
+      "hyprland/workspaces",
+      "hyprland/window"
+    ],
+  
+    "modules-center": ["clock"],
+  
+    "modules-right": [
+      "tray",
+      "network",
+      "pulseaudio",
+      "battery",
+      "custom/screenshot", 
+      "custom/poweroff"
+    ],
+  
+    // Modules configuration
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "active-only": false,
+      "all-outputs": true,
+      "warp-on-scroll": false,
+      "format": "{icon}"
+    },
+  
+    "hyprland/window": {
+      "format": "{class}",
+      "max-length": 20,
+      "rewrite": {
+        "": " hyprland",
+        "kitty": " terminal",
+        "Code": " code",
+        "Google-chrome": " chrome",
+        "Brave-browser": " brave",
+        "Spotify": "󰓇 spotify",
+        "org.gnome.Nautilus": "󰉋 files",
+        "discord": "󰙯 discord",
+        "GitHub Desktop": " github",
+        "mousepad": "notes"
+      }
+    },
+
+    "clock": {
+      "format": "{:%H:%M}",
+      "format-alt": "{:%d/%m/%Y}"
+    },
+  
+    "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+      "format": "<span color='#e9e9e9' >  </span>{volume}% ",
+      "format-muted": "<span color='#e9e9e9' >  </span>{volume}% ",
+      "format-bluetooth": "<span color='#e9e9e9' > 󰂰 </span>{volume}% ",
+      "format-bluetooth-muted": "<span color='#e9e9e9' > 󰂲 </span>{volume}% ",
+      "format-source": "{volume}% ",
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "tooltip": false,
+      "max-volume": 200
+    },
+
+    "network": {
+        "interface": "wlan0",
+        "format": "<span> {icon} {signalStrength}% </span>",
+        "format-wifi": "<span> {icon} {signalStrength}% </span>",
+        "format-disconnected": "Disconnected",
+        "format-icons": [""],
+        "on-click": "/home/enzo/scripts/network.sh",
+        "tooltip-format": "Connected to {essid}"
+        },
+  
+    "battery": {
+      "interval": 1,
+      "states": {
+        "good": 99,
+        "warning": 30,
+        "critical": 20
+      },
+      "format-icons": [" "," "," "," "," "],
+      "format": "<span color='#e9e9e9' > {icon}</span>{capacity}% ",
+      "format-critical": "<span color='#e9e9e9' > {icon}</span>{capacity}% ",
+      "format-warning": "<span color='#e9e9e9' > {icon}</span>{capacity}% ",
+      "format-full": "<span color='#e9e9e9' > {icon}</span>{capacity}% ",
+      "format-charging": "<span color='#e9e9e9' > 󰂅 </span>{capacity}% ",
+      "format-charging-warning": "<span color='#d8a657' > 󰢝 </span>{capacity}% ",
+      "format-charging-critical": "<span color='#cc241d' > 󰢜 </span>{capacity}% ",
+      "format-plugged": "<span color='#e9e9e9' > 󰂅 </span>{capacity}% ",
+      "format-alt": "<span color='#e9e9e9' > 󱧥 </span>{time} "
+    },
+
+    "custom/screenshot": {
+        "format":"   <span>{icon}</span>",
+        "format-icons": ["󰹑"],
+        "on-click": "hyprshot --clipboard-only -m window",
+        "tooltip": true,
+        "tooltip-format": "Take screenshot"
+    },
+    
+    "custom/poweroff": {
+        "format":"<span>{icon}</span>",
+        "format-icons": [""],
+        "on-click": "wlogout",
+        "tooltip": true,
+        "tooltip-format": "Sleep time"
+    }
+  }
